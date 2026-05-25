@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopfly | Premium Quality, Thoughtfully Priced</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f2f7f5',
+                            100: '#e1efe9',
+                            200: '#c4dfd4',
+                            300: '#9bc6b7',
+                            400: '#6ba794',
+                            500: '#4b8b78',
+                            600: '#3a6f60',
+                            700: '#31594e',
+                            800: '#294841',
+                            900: '#1a2e25', // Deep Forest Green
+                        },
+                        accent: {
+                            DEFAULT: '#D97706', // Warm Marigold/Gold
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Announcement Bar -->
+    <div class="bg-brand-900 text-brand-50 text-xs md:text-sm text-center py-2.5 font-medium tracking-wide relative z-40">
+        ✨ Free Pan-India Delivery | Cash on Delivery Only ✨
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 w-full z-30 nav-transition bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <button onclick="toggleMobileMenu(true)" class="lg:hidden p-2 -ml-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <div class="hidden lg:flex gap-8 text-sm font-medium tracking-widest uppercase">
+                    <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                    <a href="shop.html" class="hover:text-accent transition-colors">Shop All</a>
+                    <a href="about.html" class="hover:text-accent transition-colors">Our Story</a>
+                </div>
+            </div>
+            
+            <a href="index.html" class="font-serif text-3xl tracking-tight absolute left-1/2 -translate-x-1/2 cursor-pointer text-brand-900">
+                Shopfly.
+            </a>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSearch(true)" class="p-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors" aria-label="Search">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button onclick="toggleCart(true)" class="p-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors relative group" aria-label="Open cart">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    <span id="cart-badge" class="hidden absolute top-0 right-0 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VIEWS CONTAINER -->
+    <div id="views-container">
+        
+        <!-- HOME VIEW -->
+        
+
+        <!-- ALL PRODUCTS VIEW -->
+        
+
+        <!-- ABOUT US VIEW -->
+        
+
+        <!-- TERMS VIEW -->
+        
+
+        <!-- PRIVACY VIEW -->
+        <div id="view-privacy" class="page-view pt-32 pb-24 max-w-4xl mx-auto px-4 min-h-screen block">
+            <h1 class="font-serif text-4xl md:text-5xl mb-10 text-brand-900 border-b border-brand-200 pb-6">Privacy Policy</h1>
+            <div class="prose max-w-none text-brand-700 space-y-8 font-light leading-relaxed">
+                <p class="text-sm text-brand-500">Last Updated: March 15, 2026</p>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">1. Information We Collect</h3>
+                    <p>We collect personal information that you voluntarily provide to us when you register on the website, express an interest in obtaining information about us or our products, or otherwise contact us. The personal information that we collect depends on the context of your interactions with us and the website, the choices you make, and the products and features you use. This may include your name, email address, phone number, shipping and billing addresses, and payment information.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">2. How We Use Your Information</h3>
+                    <p>We use personal information collected via our website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations. Purposes include: fulfilling and managing your orders, delivering targeted advertising, requesting feedback, and providing customer support.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">3. Cookies and Tracking Technologies</h3>
+                    <p>We may use cookies and similar tracking technologies (like web beacons and pixels) to access or store information. Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Policy. Cookies help us remember your cart items, understand your preferences based on previous or current site activity, and compile aggregate data about site traffic and site interaction.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">4. Data Sharing and Disclosure</h3>
+                    <p>We only share information with your consent, to comply with laws, to provide you with services, to protect your rights, or to fulfill business obligations. We may share your data with third-party vendors, service providers, contractors, or agents who perform services for us or on our behalf and require access to such information to do that work (e.g., payment processing, data analysis, email delivery, hosting services, customer service, and marketing efforts).</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">5. Data Security</h3>
+                    <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">6. Your Privacy Rights</h3>
+                    <p>Depending on your location, you may have certain rights regarding your personal information, such as the right to request access to the data we collect from you, change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please contact our support team.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-serif text-brand-900 mb-3">7. Contact Us</h3>
+                    <p>If you have questions or comments about this notice, you may email us at shopyfly826@gmail.com or by post to: Shopfly Lifestyle Pvt. Ltd., Bengaluru, Karnataka, India.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT VIEW -->
+        
+
+        <!-- PRODUCT VIEW -->
+        
+
+        <!-- CHECKOUT VIEW -->
+        
+
+        <!-- CONFIRMATION VIEW -->
+        
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-50 pt-20 pb-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <h2 class="font-serif text-3xl mb-6 text-white">Shopfly.</h2>
+                <p class="text-brand-200 max-w-sm mb-8 leading-relaxed font-light">
+                    Premium gifts and modern lifestyle essentials curated for the dynamic Indian consumer. Quality, utility, and joy in every parcel.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-medium mb-6 text-white tracking-widest uppercase text-sm">Shop</h3>
+                <ul class="space-y-4 text-brand-200 text-sm font-light">
+                    <li><a href="shop.html" class="hover:text-accent transition-colors">All Products</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Our Story</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-medium mb-6 text-white tracking-widest uppercase text-sm">Support</h3>
+                <ul class="space-y-4 text-brand-200 text-sm font-light">
+                    <li><a href="terms.html" class="hover:text-accent transition-colors">Terms &amp; Conditions</a></li>
+                    <li><a href="privacy.html" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Track Order</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-brand-800 text-brand-400 text-sm flex flex-col md:flex-row justify-between items-center font-light">
+            <p>© 2026 Shopfly Lifestyle Pvt. Ltd. All rights reserved.</p>
+            <div class="flex items-center gap-2 mt-4 md:mt-0">
+                <span>Made with</span> <i data-lucide="heart" class="w-4 h-4 text-accent fill-accent"></i> <span>in India</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none overlay-transition flex flex-col">
+        <div class="p-6 border-b border-brand-100 flex items-center gap-4">
+            <i data-lucide="search" class="w-6 h-6 text-brand-400"></i>
+            <input type="text" id="search-input" placeholder="Search products..." class="flex-1 text-xl font-medium text-brand-900 outline-none placeholder:text-brand-300 bg-transparent" aria-label="Search products" oninput="handleSearch(this.value)">
+            <button onclick="toggleSearch(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close search">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 bg-brand-50/30">
+            <div id="search-results" class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Search results will appear here -->
+                <div class="text-brand-500 text-center col-span-full py-10">Type to start searching...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-900/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none overlay-transition lg:hidden" onclick="toggleMobileMenu(false)"></div>
+    <div id="mobile-menu-drawer" class="fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-2xl flex flex-col -translate-x-full cart-transition lg:hidden">
+        <div class="p-6 border-b border-brand-100 flex justify-between items-center bg-white">
+            <h2 class="font-serif text-2xl text-brand-900">Menu</h2>
+            <button onclick="toggleMobileMenu(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close menu">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col p-6 gap-6 text-lg font-medium text-brand-900">
+            <a href="index.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="home" class="w-5 h-5"></i> Home</a>
+            <a href="shop.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="shopping-bag" class="w-5 h-5"></i> Shop All</a>
+            <a href="about.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="info" class="w-5 h-5"></i> Our Story</a>
+            <a href="terms.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="file-text" class="w-5 h-5"></i> Terms &amp; Conditions</a>
+            <a href="privacy.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="shield" class="w-5 h-5"></i> Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-brand-900/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none overlay-transition" onclick="toggleCart(false)"></div>
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl flex flex-col translate-x-full cart-transition">
+        <div class="p-6 border-b border-brand-100 flex justify-between items-center bg-white">
+            <h2 class="font-serif text-2xl text-brand-900" id="cart-title">Your Cart (0)</h2>
+            <button onclick="toggleCart(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close cart">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 bg-white no-scrollbar">
+            <!-- Cart items injected here by JS -->
+        </div>
+
+        <div id="cart-footer" class="p-6 border-t border-brand-100 bg-brand-50 hidden">
+            <div class="flex justify-between mb-2 text-xl font-serif text-brand-900">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <p class="text-sm text-brand-600 mb-6 font-light">Taxes included. Free shipping.</p>
+            <button onclick="openCheckoutPage()" class="w-full bg-brand-900 text-white py-4 rounded-full font-medium hover:bg-brand-800 transition-colors shadow-lg flex justify-center items-center gap-2">
+                Proceed to Checkout <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <div class="mt-4 flex justify-center items-center gap-2 text-xs text-brand-500">
+                <i data-lucide="truck" class="w-4 h-4"></i> Cash on Delivery Only
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body></html>

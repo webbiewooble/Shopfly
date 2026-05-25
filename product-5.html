@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Band | Shopfly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f2f7f5',
+                            100: '#e1efe9',
+                            200: '#c4dfd4',
+                            300: '#9bc6b7',
+                            400: '#6ba794',
+                            500: '#4b8b78',
+                            600: '#3a6f60',
+                            700: '#31594e',
+                            800: '#294841',
+                            900: '#1a2e25', // Deep Forest Green
+                        },
+                        accent: {
+                            DEFAULT: '#D97706', // Warm Marigold/Gold
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Announcement Bar -->
+    <div class="bg-brand-900 text-brand-50 text-xs md:text-sm text-center py-2.5 font-medium tracking-wide relative z-40">
+        ✨ Free Pan-India Delivery | Cash on Delivery Only ✨
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 w-full z-30 nav-transition bg-transparent py-5">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <button onclick="toggleMobileMenu(true)" class="lg:hidden p-2 -ml-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <div class="hidden lg:flex gap-8 text-sm font-medium tracking-widest uppercase">
+                    <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+                    <a href="shop.html" class="hover:text-accent transition-colors">Shop All</a>
+                    <a href="about.html" class="hover:text-accent transition-colors">Our Story</a>
+                </div>
+            </div>
+            
+            <a href="index.html" class="font-serif text-3xl tracking-tight absolute left-1/2 -translate-x-1/2 cursor-pointer text-brand-900">
+                Shopfly.
+            </a>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSearch(true)" class="p-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors" aria-label="Search">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </button>
+                <button onclick="toggleCart(true)" class="p-2 text-brand-900 hover:bg-brand-100/50 rounded-full transition-colors relative group" aria-label="Open cart">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    <span id="cart-badge" class="hidden absolute top-0 right-0 bg-accent text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-sm">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VIEWS CONTAINER -->
+    <div id="views-container">
+        
+        <!-- HOME VIEW -->
+        
+
+        <!-- ALL PRODUCTS VIEW -->
+        
+
+        <!-- ABOUT US VIEW -->
+        
+
+        <!-- TERMS VIEW -->
+        
+
+        <!-- PRIVACY VIEW -->
+        
+
+        <!-- CONTACT VIEW -->
+        
+
+        <!-- PRODUCT VIEW -->
+        <div id="view-product" class="page-view pt-32 pb-24 max-w-7xl mx-auto px-4 min-h-screen block">
+            <button onclick="window.location.href='index.html'" class="flex items-center gap-2 text-brand-600 hover:text-brand-900 transition-colors mb-8 font-medium">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Shop
+            </button>
+            <div id="product-detail-container" class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="relative">
+                <div class="sticky top-32">
+                    <div class="bg-brand-50 rounded-3xl overflow-hidden border border-brand-100 aspect-square flex items-center justify-center relative">
+                        <img id="main-product-image" src="https://picsum.photos/seed/healthband/800/800" alt="Smart Health Band" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+                        <button onclick="toggleWishlist(5, event)" class="absolute top-4 right-4 p-3 bg-white/70 backdrop-blur-md rounded-full text-brand-600 hover:text-rose-500 hover:bg-white transition-colors shadow-sm wishlist-btn-5" aria-label="Add to wishlist">
+                            <i data-lucide="heart" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-sm text-brand-500 uppercase tracking-widest mb-2 font-medium">Electronics</p>
+                <h1 class="font-serif text-4xl md:text-5xl text-brand-900 mb-4">Smart Health Band</h1>
+                <div class="flex items-center gap-3 mb-2">
+                    <p class="text-2xl font-semibold text-brand-900">₹1,499</p>
+                    <p class="text-lg text-brand-400 line-through">₹2,999</p><span class="bg-rose-100 text-rose-600 text-xs font-bold px-2 py-1 rounded">50% OFF</span>
+                </div>
+                <p class="text-brand-700 text-lg leading-relaxed mb-8 font-light">Track your steps, heart rate, and sleep patterns. Stay connected with smart notifications right on your wrist. Water-resistant and long battery life.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <button onclick="addToCart(5)" class="flex-1 bg-white border-2 border-brand-900 text-brand-900 py-4 rounded-full font-medium hover:bg-brand-50 transition-colors flex justify-center items-center gap-2">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i> Add to Cart
+                    </button>
+                    <button onclick="openCheckoutPage(5)" class="flex-1 bg-accent text-white py-4 rounded-full font-medium hover:bg-amber-500 transition-colors shadow-lg flex justify-center items-center gap-2">
+                        <i data-lucide="zap" class="w-5 h-5"></i> Buy Now
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 border-t border-brand-100 pt-8">
+                    <div class="flex items-center gap-3 text-brand-700">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-900">
+                            <i data-lucide="truck" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-sm font-medium">Free Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-brand-700">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-900">
+                            <i data-lucide="banknote" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-sm font-medium">Cash on Delivery</span>
+                    </div>
+                    <div class="flex items-center gap-3 text-brand-700 col-span-2 mt-2">
+                        <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-900">
+                            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-sm font-medium">7 Day's Easy Return Policy</span>
+                    </div>
+                </div>
+
+                
+                <div class="mt-10 pt-8 border-t border-brand-100">
+                    <h3 class="font-serif text-2xl text-brand-900 mb-6">Product Specifications</h3>
+                    <div class="grid grid-cols-1 gap-y-3 text-sm">
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Brand</div>
+                                <div class="text-brand-700 col-span-2">TechFit</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Recommended Uses For Product</div>
+                                <div class="text-brand-700 col-span-2">Fitness Tracking, Health Monitoring</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Special Feature</div>
+                                <div class="text-brand-700 col-span-2">Heart Rate Monitor, Sleep Tracker</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Power Source</div>
+                                <div class="text-brand-700 col-span-2">Battery Powered</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Model Name</div>
+                                <div class="text-brand-700 col-span-2">Smart Health Band Pro</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Included Components</div>
+                                <div class="text-brand-700 col-span-2">Smart Band, Magnetic Charger</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Item Weight</div>
+                                <div class="text-brand-700 col-span-2">24 Grams</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Colour</div>
+                                <div class="text-brand-700 col-span-2">Midnight Black</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Water Resistance</div>
+                                <div class="text-brand-700 col-span-2">5 ATM (50 Meters)</div>
+                            </div>
+                        
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="font-medium text-brand-900 col-span-1">Screen Size</div>
+                                <div class="text-brand-700 col-span-2">1.1 Inches AMOLED</div>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+
+                
+                <div class="mt-10 pt-8 border-t border-brand-100">
+                    <h3 class="font-serif text-2xl text-brand-900 mb-6">About this item</h3>
+                    <ul class="space-y-3">
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>❤️ 24/7 Heart Rate Monitoring – Keep track of your cardiovascular health all day.</span>
+                            </li>
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>🩸 SpO2 Tracking – Measure your blood oxygen saturation levels anytime.</span>
+                            </li>
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>🏃‍♂️ 11 Sports Modes – Accurately track running, cycling, swimming, and more.</span>
+                            </li>
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>😴 Sleep Analysis – Monitor light, deep, and REM sleep stages for better rest.</span>
+                            </li>
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>📱 Smart Notifications – Receive calls, texts, and app alerts directly on your wrist.</span>
+                            </li>
+                        
+                            <li class="flex gap-3 text-brand-700 font-light leading-relaxed">
+                                <span class="shrink-0 mt-2 w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                                <span>🔋 14-Day Battery – Spend less time charging and more time moving.</span>
+                            </li>
+                        
+                    </ul>
+                </div>
+                
+
+                
+                <div class="mt-10 pt-8 border-t border-brand-100">
+                    <h3 class="font-serif text-2xl text-brand-900 mb-6">Customer Reviews</h3>
+                    <div class="space-y-6">
+                        
+                            <div class="bg-brand-50 p-5 rounded-2xl border border-brand-100">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="font-medium text-brand-900">Manish V.</p>
+                                        <p class="text-xs text-brand-500 mt-0.5">13 Mar 2026</p>
+                                    </div>
+                                    <div class="flex gap-0.5 text-amber-400">
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 text-brand-200"></i>
+                                        
+                                    </div>
+                                </div>
+                                <p class="text-brand-700 font-light text-sm leading-relaxed">Accurate step tracking and the sleep analysis is quite detailed.</p>
+                            </div>
+                        
+                            <div class="bg-brand-50 p-5 rounded-2xl border border-brand-100">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="font-medium text-brand-900">Sneha L.</p>
+                                        <p class="text-xs text-brand-500 mt-0.5">08 Mar 2026</p>
+                                    </div>
+                                    <div class="flex gap-0.5 text-amber-400">
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                    </div>
+                                </div>
+                                <p class="text-brand-700 font-light text-sm leading-relaxed">Looks premium and battery lasts forever!</p>
+                            </div>
+                        
+                            <div class="bg-brand-50 p-5 rounded-2xl border border-brand-100">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="font-medium text-brand-900">Karan W.</p>
+                                        <p class="text-xs text-brand-500 mt-0.5">01 Mar 2026</p>
+                                    </div>
+                                    <div class="flex gap-0.5 text-amber-400">
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        
+                                    </div>
+                                </div>
+                                <p class="text-brand-700 font-light text-sm leading-relaxed">Best fitness band in this price range.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+            
+            <!-- Suggested Products Section -->
+            <div id="suggested-products-container" class="mt-24 border-t border-brand-100 pt-16">
+                <!-- Suggested products injected here -->
+            </div>
+
+            <!-- Reviews Section -->
+            <div id="product-reviews-container" class="mt-24 border-t border-brand-100 pt-16">
+                <!-- Reviews injected here -->
+            </div>
+        </div>
+
+        <!-- CHECKOUT VIEW -->
+        
+
+        <!-- CONFIRMATION VIEW -->
+        
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-900 text-brand-50 pt-20 pb-10 mt-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2">
+                <h2 class="font-serif text-3xl mb-6 text-white">Shopfly.</h2>
+                <p class="text-brand-200 max-w-sm mb-8 leading-relaxed font-light">
+                    Premium gifts and modern lifestyle essentials curated for the dynamic Indian consumer. Quality, utility, and joy in every parcel.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-medium mb-6 text-white tracking-widest uppercase text-sm">Shop</h3>
+                <ul class="space-y-4 text-brand-200 text-sm font-light">
+                    <li><a href="shop.html" class="hover:text-accent transition-colors">All Products</a></li>
+                    <li><a href="about.html" class="hover:text-accent transition-colors">Our Story</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-medium mb-6 text-white tracking-widest uppercase text-sm">Support</h3>
+                <ul class="space-y-4 text-brand-200 text-sm font-light">
+                    <li><a href="terms.html" class="hover:text-accent transition-colors">Terms &amp; Conditions</a></li>
+                    <li><a href="privacy.html" class="hover:text-accent transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors">Track Order</a></li>
+                    <li><a href="contact.html" class="hover:text-accent transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-brand-800 text-brand-400 text-sm flex flex-col md:flex-row justify-between items-center font-light">
+            <p>© 2026 Shopfly Lifestyle Pvt. Ltd. All rights reserved.</p>
+            <div class="flex items-center gap-2 mt-4 md:mt-0">
+                <span>Made with</span> <i data-lucide="heart" class="w-4 h-4 text-accent fill-accent"></i> <span>in India</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-white z-50 opacity-0 pointer-events-none overlay-transition flex flex-col">
+        <div class="p-6 border-b border-brand-100 flex items-center gap-4">
+            <i data-lucide="search" class="w-6 h-6 text-brand-400"></i>
+            <input type="text" id="search-input" placeholder="Search products..." class="flex-1 text-xl font-medium text-brand-900 outline-none placeholder:text-brand-300 bg-transparent" aria-label="Search products" oninput="handleSearch(this.value)">
+            <button onclick="toggleSearch(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close search">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 bg-brand-50/30">
+            <div id="search-results" class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Search results will appear here -->
+                <div class="text-brand-500 text-center col-span-full py-10">Type to start searching...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-900/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none overlay-transition lg:hidden" onclick="toggleMobileMenu(false)"></div>
+    <div id="mobile-menu-drawer" class="fixed top-0 left-0 h-full w-64 bg-white z-50 shadow-2xl flex flex-col -translate-x-full cart-transition lg:hidden">
+        <div class="p-6 border-b border-brand-100 flex justify-between items-center bg-white">
+            <h2 class="font-serif text-2xl text-brand-900">Menu</h2>
+            <button onclick="toggleMobileMenu(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close menu">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div class="flex flex-col p-6 gap-6 text-lg font-medium text-brand-900">
+            <a href="index.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="home" class="w-5 h-5"></i> Home</a>
+            <a href="shop.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="shopping-bag" class="w-5 h-5"></i> Shop All</a>
+            <a href="about.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="info" class="w-5 h-5"></i> Our Story</a>
+            <a href="terms.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="file-text" class="w-5 h-5"></i> Terms &amp; Conditions</a>
+            <a href="privacy.html" class="hover:text-accent transition-colors flex items-center gap-3"><i data-lucide="shield" class="w-5 h-5"></i> Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-overlay" class="fixed inset-0 bg-brand-900/60 backdrop-blur-sm z-40 opacity-0 pointer-events-none overlay-transition" onclick="toggleCart(false)"></div>
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl flex flex-col translate-x-full cart-transition">
+        <div class="p-6 border-b border-brand-100 flex justify-between items-center bg-white">
+            <h2 class="font-serif text-2xl text-brand-900" id="cart-title">Your Cart (0)</h2>
+            <button onclick="toggleCart(false)" class="p-2 hover:bg-brand-50 rounded-full transition-colors text-brand-500 hover:text-brand-900" aria-label="Close cart">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6 bg-white no-scrollbar">
+            <!-- Cart items injected here by JS -->
+        </div>
+
+        <div id="cart-footer" class="p-6 border-t border-brand-100 bg-brand-50 hidden">
+            <div class="flex justify-between mb-2 text-xl font-serif text-brand-900">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">₹0</span>
+            </div>
+            <p class="text-sm text-brand-600 mb-6 font-light">Taxes included. Free shipping.</p>
+            <button onclick="openCheckoutPage()" class="w-full bg-brand-900 text-white py-4 rounded-full font-medium hover:bg-brand-800 transition-colors shadow-lg flex justify-center items-center gap-2">
+                Proceed to Checkout <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+            <div class="mt-4 flex justify-center items-center gap-2 text-xs text-brand-500">
+                <i data-lucide="truck" class="w-4 h-4"></i> Cash on Delivery Only
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body></html>
